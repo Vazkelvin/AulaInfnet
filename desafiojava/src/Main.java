@@ -1,15 +1,31 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
+
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Scanner scanner = new Scanner(System.in);
+        Carro carro1 = new Carro();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        System.out.println("Digite a marca do carro:");
+
+        carro1.marca = scanner.nextLine();
+
+        System.out.println("Digite o modelo do carro:");
+
+        carro1.modelo = scanner.nextLine();
+
+        System.out.println("Digite o ano de fabricação do carro:");
+
+        carro1.anofabricacao = scanner.nextInt();
+
+        System.out.println("Digite o preço da fipe do carro:");
+
+        carro1.pipe = scanner.nextDouble();
+
+
+        carro1.idadecarro();
+
+
+
     }
 }
